@@ -50,11 +50,7 @@ if(keyCode == SHIFT){
   player_2_y = player_2_y + 5;
 }
     }
-//robin foo anfang
-if (keyCode == UP && player_2_y > 50) {
-  player_2_y = player_2_y - 5;
-}
-//robin foo ende
+
 if(keyCode == UP){
   if(player_2_y > 50){
   player_2_y = player_2_y - 5;
