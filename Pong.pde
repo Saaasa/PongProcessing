@@ -1,5 +1,3 @@
-
-
 float player_1_x;
 float player_1_y;
 float player_2_x;
@@ -19,7 +17,7 @@ void setup(){
   player_2_y = 60;
   ball_x = 400;
   ball_y = 300;
-  ball_speed_x = -4;
+  ball_speed_x = 0;
   ball_speed_y=0;
    round = 0;
   size(800, 600);
@@ -33,8 +31,12 @@ void draw (){
   rect(player_1_x,player_1_y,20,100);
    rect(player_2_x,player_2_y,20,100);
     rect(ball_x,ball_y,10,10);
-    
+    fill(255, 255, 255);
+       
     if(keyPressed){
+            if(key==' '){
+        ball_speed_x=4;
+      }
        if(keyCode == CONTROL){
       if(player_1_y < 550){
   player_1_y = player_1_y + 5;
@@ -50,13 +52,18 @@ if(keyCode == SHIFT){
   player_2_y = player_2_y + 5;
 }
     }
-
 if(keyCode == UP){
   if(player_2_y > 50){
   player_2_y = player_2_y - 5;
-}
-}
   }
+  }
+  
+ if (key=='p' || key=='P') {
+   ball_speed_x=0;
+   ball_speed_y=0;
+
+}
+    }
   
   
 
